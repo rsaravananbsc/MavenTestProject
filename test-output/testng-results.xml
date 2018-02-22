@@ -1,52 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="2" failed="0" ignored="0" total="2" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[Title is NOT Matching]]>
-    </line>
-    <line>
-      <![CDATA[ErrMsg is Displayed]]>
-    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="22995" started-at="2018-02-21T13:19:28Z" finished-at="2018-02-21T13:19:51Z">
+  <suite name="Suite" duration-ms="3947" started-at="2018-02-22T14:26:23Z" finished-at="2018-02-22T14:26:27Z">
     <groups>
       <group name="smoke">
-        <method signature="ValidLogin.testValidLogin()[pri:1, instance:MavenProject.MavenTestProject.ValidLogin@7a3d45bd]" name="testValidLogin" class="MavenProject.MavenTestProject.ValidLogin"/>
+        <method signature="ValidLogin.testValidLogin()[pri:1, instance:MavenProject.MavenTestProject.ValidLogin@b7dd107]" name="testValidLogin" class="MavenProject.MavenTestProject.ValidLogin"/>
       </group> <!-- smoke -->
       <group name="login">
-        <method signature="InvalidLogin.testInvalidLogin()[pri:2, instance:MavenProject.MavenTestProject.InvalidLogin@1e7c7811]" name="testInvalidLogin" class="MavenProject.MavenTestProject.InvalidLogin"/>
+        <method signature="InvalidLogin.testInvalidLogin()[pri:2, instance:MavenProject.MavenTestProject.InvalidLogin@42eca56e]" name="testInvalidLogin" class="MavenProject.MavenTestProject.InvalidLogin"/>
       </group> <!-- login -->
     </groups>
-    <test name="Test" duration-ms="22995" started-at="2018-02-21T13:19:28Z" finished-at="2018-02-21T13:19:51Z">
-      <class name="MavenProject.MavenTestProject.ValidLogin">
-        <test-method status="PASS" signature="openApplication(java.lang.String)[pri:0, instance:MavenProject.MavenTestProject.ValidLogin@7a3d45bd]" name="openApplication" is-config="true" duration-ms="5003" started-at="2018-02-21T13:19:28Z" finished-at="2018-02-21T13:19:33Z">
+    <test name="Test" duration-ms="3947" started-at="2018-02-22T14:26:23Z" finished-at="2018-02-22T14:26:27Z">
+      <class name="MavenProject.MavenTestProject.InvalidLogin">
+        <test-method status="FAIL" signature="openApplication(java.lang.String, java.lang.String)[pri:0, instance:MavenProject.MavenTestProject.InvalidLogin@42eca56e]" name="openApplication" is-config="true" duration-ms="1018" started-at="2018-02-22T14:26:25Z" finished-at="2018-02-22T14:26:26Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[10.101.155.62]]>
+              </value>
+            </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApplication -->
-        <test-method status="FAIL" signature="testValidLogin()[pri:1, instance:MavenProject.MavenTestProject.ValidLogin@7a3d45bd]" name="testValidLogin" duration-ms="11191" started-at="2018-02-21T13:19:33Z" finished-at="2018-02-21T13:19:44Z">
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'DESKTOP-377EF79', ip: '10.101.155.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.fail(Assert.java:103)
-at MavenProject.MavenTestProject.POMClass.EnterTimeTrackPage.verifyTitle(EnterTimeTrackPage.java:61)
-at MavenProject.MavenTestProject.ValidLogin.testValidLogin(ValidLogin.java:24)
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'DESKTOP-377EF79', ip: '10.101.155.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:217)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:140)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:153)
+at MavenProject.MavenTestProject.BaseClass.BaseTest.openApplication(BaseTest.java:34)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 10.101.155.62:4444 [/10.101.155.62] failed: Connection refused: connect
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:138)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:86)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:337)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:136)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+... 32 more
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+... 47 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="SKIP" signature="testInvalidLogin()[pri:2, instance:MavenProject.MavenTestProject.InvalidLogin@42eca56e]" name="testInvalidLogin" duration-ms="0" started-at="2018-02-22T14:26:26Z" finished-at="2018-02-22T14:26:26Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'DESKTOP-377EF79', ip: '10.101.155.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'DESKTOP-377EF79', ip: '10.101.155.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:217)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:140)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:153)
+at MavenProject.MavenTestProject.BaseClass.BaseTest.openApplication(BaseTest.java:34)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 10.101.155.62:4444 [/10.101.155.62] failed: Connection refused: connect
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:138)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:86)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:337)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:136)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+... 32 more
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+... 47 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLogin -->
+        <test-method status="FAIL" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:MavenProject.MavenTestProject.InvalidLogin@42eca56e]" name="closeApplication" is-config="true" duration-ms="1" started-at="2018-02-22T14:26:27Z" finished-at="2018-02-22T14:26:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=InvalidLogin.testInvalidLogin()[pri:2, instance:MavenProject.MavenTestProject.InvalidLogin@42eca56e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at MavenProject.MavenTestProject.BaseClass.BaseTest.closeApplication(BaseTest.java:48)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:533)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
 at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
@@ -68,56 +231,235 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[Title is NOT Matching]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testValidLogin -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:MavenProject.MavenTestProject.ValidLogin@7a3d45bd]" name="closeApplication" is-config="true" duration-ms="1047" started-at="2018-02-21T13:19:44Z" finished-at="2018-02-21T13:19:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testValidLogin status=FAILURE method=ValidLogin.testValidLogin()[pri:1, instance:MavenProject.MavenTestProject.ValidLogin@7a3d45bd] output=Title is NOT Matching]]]>
-              </value>
-            </param>
-          </params>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- MavenProject.MavenTestProject.ValidLogin -->
-      <class name="MavenProject.MavenTestProject.InvalidLogin">
-        <test-method status="PASS" signature="openApplication(java.lang.String)[pri:0, instance:MavenProject.MavenTestProject.InvalidLogin@1e7c7811]" name="openApplication" is-config="true" duration-ms="3952" started-at="2018-02-21T13:19:45Z" finished-at="2018-02-21T13:19:49Z">
+      </class> <!-- MavenProject.MavenTestProject.InvalidLogin -->
+      <class name="MavenProject.MavenTestProject.ValidLogin">
+        <test-method status="FAIL" signature="openApplication(java.lang.String, java.lang.String)[pri:0, instance:MavenProject.MavenTestProject.ValidLogin@b7dd107]" name="openApplication" is-config="true" duration-ms="2762" started-at="2018-02-22T14:26:23Z" finished-at="2018-02-22T14:26:25Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="testInvalidLogin()[pri:2, instance:MavenProject.MavenTestProject.InvalidLogin@1e7c7811]" name="testInvalidLogin" duration-ms="1041" started-at="2018-02-21T13:19:49Z" finished-at="2018-02-21T13:19:50Z">
-          <reporter-output>
-            <line>
-              <![CDATA[ErrMsg is Displayed]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testInvalidLogin -->
-        <test-method status="PASS" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:MavenProject.MavenTestProject.InvalidLogin@1e7c7811]" name="closeApplication" is-config="true" duration-ms="715" started-at="2018-02-21T13:19:50Z" finished-at="2018-02-21T13:19:51Z">
-          <params>
-            <param index="0">
+            <param index="1">
               <value>
-                <![CDATA[[TestResult name=testInvalidLogin status=SUCCESS method=InvalidLogin.testInvalidLogin()[pri:2, instance:MavenProject.MavenTestProject.InvalidLogin@1e7c7811] output=ErrMsg is Displayed]]]>
+                <![CDATA[10.101.155.62]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'DESKTOP-377EF79', ip: '10.101.155.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'DESKTOP-377EF79', ip: '10.101.155.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:217)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:140)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:153)
+at MavenProject.MavenTestProject.BaseClass.BaseTest.openApplication(BaseTest.java:34)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 10.101.155.62:4444 [/10.101.155.62] failed: Connection refused: connect
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:138)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:86)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:337)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:136)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+... 32 more
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+... 47 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method status="SKIP" signature="testValidLogin()[pri:1, instance:MavenProject.MavenTestProject.ValidLogin@b7dd107]" name="testValidLogin" duration-ms="0" started-at="2018-02-22T14:26:25Z" finished-at="2018-02-22T14:26:25Z">
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'DESKTOP-377EF79', ip: '10.101.155.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:40.131Z'
+System info: host: 'DESKTOP-377EF79', ip: '10.101.155.99', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:217)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:140)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:153)
+at MavenProject.MavenTestProject.BaseClass.BaseTest.openApplication(BaseTest.java:34)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:520)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 10.101.155.62:4444 [/10.101.155.62] failed: Connection refused: connect
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:138)
+at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:86)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:337)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:136)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+... 32 more
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+... 47 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method status="FAIL" signature="closeApplication(org.testng.ITestResult)[pri:0, instance:MavenProject.MavenTestProject.ValidLogin@b7dd107]" name="closeApplication" is-config="true" duration-ms="3" started-at="2018-02-22T14:26:25Z" finished-at="2018-02-22T14:26:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=ValidLogin.testValidLogin()[pri:1, instance:MavenProject.MavenTestProject.ValidLogin@b7dd107] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at MavenProject.MavenTestProject.BaseClass.BaseTest.closeApplication(BaseTest.java:48)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:533)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- MavenProject.MavenTestProject.InvalidLogin -->
+      </class> <!-- MavenProject.MavenTestProject.ValidLogin -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
